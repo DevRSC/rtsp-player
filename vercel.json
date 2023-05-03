@@ -14,11 +14,12 @@
     {
       "src": "/(.*)",
       "dest": "index.js"
-    },
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/api/websocket",
-      "dest": "api/websocket.js",
-      "webSocket": true
+      "source": "/api/websocket",
+      "destination": "api/websocket.js"
     }
   ]
 }
