@@ -1,0 +1,15 @@
+{
+  "name": "ffmpegtoweb",
+  "version": "1.0.0",
+  "description": "Shinobi Testing Tool for H.264 over HTTP and Socket.IO",
+  "main": "ffmpegToWeb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.1"
+  },
+  "author": "Moe Alam",
+  "license": "MIT"
+}
