@@ -20,6 +20,15 @@ const drawFrame = (frame) => {
   img.src = url;
 };
 
+const sendRtspUrl = (url) => {
+  socket.send(
+    JSON.stringify({
+      type: "rtspUrl",
+      url: url,
+    })
+  );
+};
+
 socket.onmessage = (event) => {
   const frame = event.data;
   drawFrame(frame);
@@ -27,6 +36,12 @@ socket.onmessage = (event) => {
 
 socket.onopen = () => {
   console.log("WebSocket connected.");
+  const url = prompt("Please enter the RTSP stream URL:");
+  if (url) {
+    sendRtspUrl(url);
+  } else {
+    alert("No RTSP URL provided. Refresh the page to try again.");
+  }
 };
 
 socket.onerror = (error) => {
