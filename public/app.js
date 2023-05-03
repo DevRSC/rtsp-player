@@ -1,7 +1,9 @@
 const canvas = document.getElementById("videoCanvas");
 const context = canvas.getContext("2d");
 
-const socket = new WebSocket("ws://" + window.location.host);
+const socket = new WebSocket(
+  "wss://" + window.location.host + "/api/websocket"
+);
 socket.binaryType = "arraybuffer";
 
 const drawFrame = (frame) => {
