@@ -12,8 +12,8 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "index.js"
+      "source": "/",
+      "destination": "/public/index.html"
     },
     {
       "source": "/api/websocket",
